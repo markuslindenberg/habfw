@@ -1,0 +1,11 @@
+[Match]
+Type=ether
+
+[Network]
+EmitLLDP=yes
+LinkLocalAddressing=yes
+DHCP=yes
+
+[DHCP]
+ClientIdentifier=mac
+RouteMetric=200

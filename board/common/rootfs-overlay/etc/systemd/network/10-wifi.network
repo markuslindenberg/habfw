@@ -1,0 +1,10 @@
+[Match]
+Type=wlan
+
+[Network]
+LinkLocalAddressing=yes
+DHCP=yes
+
+[DHCP]
+ClientIdentifier=mac
+RouteMetric=300

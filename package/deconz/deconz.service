@@ -1,0 +1,21 @@
+[Unit]
+Description=deconz
+After=network.target
+
+[Service]
+User=deconz
+SupplementaryGroups=dialout
+DynamicUser=yes
+ReadWritePaths=/srv/deconz
+Environment=HOME=/srv/deconz
+RuntimeDirectory=deconz
+Environment=XDG_RUNTIME_DIR=%t/deconz
+ExecStartPre=/usr/bin/mkdir -p /srv/deconz/otau
+ExecStart=/usr/bin/deCONZ -platform minimal --auto-connect=1 --upnp=0 --dbg-error=1 --dbg-info=1 --dev=/dev/ttyConBee2
+SuccessExitStatus=143
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

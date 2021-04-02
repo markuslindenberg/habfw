@@ -1,0 +1,6 @@
+config BR2_PACKAGE_ZULU
+	bool "zulu"
+	help
+	  Zulu Build of OpenJDK
+
+	  https://www.azul.com/products/zulu-embedded/

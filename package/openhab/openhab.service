@@ -1,0 +1,30 @@
+[Unit]
+Description=openhab
+After=network.target
+
+[Service]
+User=openhab
+;SupplementaryGroups=dialout
+;DynamicUser=yes
+;ReadWritePaths=/srv/openhab
+LogsDirectory=openhab
+Environment=OPENHAB_HOME=/opt/openhab
+Environment=OPENHAB_RUNTIME=/opt/openhab/runtime
+Environment=OPENHAB_CONF=/srv/openhab/conf
+Environment=OPENHAB_USERDATA=/srv/openhab/userdata
+Environment=OPENHAB_LOGDIR=/var/log/openhab
+Environment=OPENHAB_STARTMODE=daemon
+EnvironmentFile=-/etc/default/openhab
+
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+ExecStart=/opt/openhab/runtime/bin/karaf ${OPENHAB_STARTMODE}
+ExecStop=/opt/openhab/runtime/bin/karaf stop
+SuccessExitStatus=143
+
+Restart=always
+RestartSec=10
+
+LimitNOFILE=102642
+
+[Install]
+WantedBy=multi-user.target

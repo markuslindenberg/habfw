@@ -1,0 +1,23 @@
+config BR2_PACKAGE_DECONZ
+	bool "deconz"
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+	depends on !BR2_STATIC_LIBS
+	depends on BR2_PACKAGE_QT5
+	depends on BR2_PACKAGE_HAS_LIBGL
+	depends on BR2_PACKAGE_XORG7
+	depends on BR2_PACKAGE_SYSTEMD
+	depends on BR2_PACKAGE_HAS_UDEV
+	select BR2_PACKAGE_QT5BASE_GUI
+	select BR2_PACKAGE_QT5BASE_WIDGETS
+	select BR2_PACKAGE_QT5SERIALPORT
+	select BR2_PACKAGE_QT5WEBSOCKETS
+	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_PCRE2
+	select BR2_PACKAGE_EXPAT
+	select BR2_PACKAGE_LIBCAP
+	help
+	  The Phoscon App to integrate and control many popular Zigbee
+	  devices and to setup automations and rules.
+
+	  https://www.phoscon.de/en/conbee2/software

@@ -1,0 +1,8 @@
+config BR2_PACKAGE_ZRAM_TOOLS
+	bool "zram-tools"
+	select BR2_PACKAGE_UTIL_LINUX_ZRAMCTL
+	select BR2_PACKAGE_UTIL_LINUX_BINARIES
+	help
+	  utilities for working with zram
+
+	  https://packages.debian.org/bullseye/zram-tools

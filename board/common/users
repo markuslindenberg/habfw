@@ -1,0 +1,2 @@
+openhab 1000 openhab 1000 * - dialout -
+deconz 1001 deconz 1001 * - dialout -
