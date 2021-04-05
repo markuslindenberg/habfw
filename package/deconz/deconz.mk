@@ -5,8 +5,8 @@
 ################################################################################
 
 DECONZ_VERSION = 2.10.04
-DECONZ_SOURCE = deconz_$(DECONZ_VERSION)-debian-stretch-stable_arm64.deb
-DECONZ_SITE = https://deconz.dresden-elektronik.de/debian/stable
+DECONZ_SOURCE = deconz-$(DECONZ_VERSION)-qt5.deb
+DECONZ_SITE = https://deconz.dresden-elektronik.de/raspbian/stable
 
 define DECONZ_EXTRACT_CMDS
 endef
