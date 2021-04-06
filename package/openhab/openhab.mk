@@ -4,9 +4,9 @@
 #
 ################################################################################
 
-OPENHAB_VERSION = 3.0.1
+OPENHAB_VERSION = 3.1.0.M3
 OPENHAB_SOURCE = openhab-$(OPENHAB_VERSION).zip
-OPENHAB_SITE = https://bintray.com/openhab/mvn/download_file?file_path=org/openhab/distro/openhab/$(OPENHAB_VERSION)
+OPENHAB_SITE = https://openhab.jfrog.io/artifactory/libs-milestone-local/org/openhab/distro/openhab/$(OPENHAB_VERSION)
 OPENHAB_LICENSE = EPL-2.0
 OPENHAB_LICENSE_FILES = LICENSE.TXT
 
