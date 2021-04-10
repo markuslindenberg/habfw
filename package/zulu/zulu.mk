@@ -13,7 +13,7 @@ ZULU_INSTALL_BASE = /opt/jvm
 
 define ZULU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)$(ZULU_INSTALL_BASE)
-	cp -dpfr $(@D)/* $(TARGET_DIR)/$(ZULU_INSTALL_BASE)/
+	cp -dpfr $(@D)/* $(TARGET_DIR)$(ZULU_INSTALL_BASE)/
 	cd $(TARGET_DIR)/usr/bin && ln -snf ../..$(ZULU_INSTALL_BASE)/bin/* .
 endef
 

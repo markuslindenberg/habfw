@@ -9,13 +9,15 @@ OPENHAB_SOURCE = openhab-$(OPENHAB_VERSION).zip
 OPENHAB_SITE = https://openhab.jfrog.io/artifactory/libs-milestone-local/org/openhab/distro/openhab/$(OPENHAB_VERSION)
 OPENHAB_LICENSE = EPL-2.0
 OPENHAB_LICENSE_FILES = LICENSE.TXT
+OPENHAB_INSTALL_BASE = /opt/openhab
 
 define OPENHAB_EXTRACT_CMDS
+	$(UNZIP) -o $(OPENHAB_DL_DIR)/$(OPENHAB_SOURCE) -d $(@D)
 endef
 
 define OPENHAB_INSTALL_TARGET_CMDS
-	$(MKDIR) -p $(TARGET_DIR)/opt/openhab
-	$(UNZIP) -o $(OPENHAB_DL_DIR)/$(OPENHAB_SOURCE) -d $(TARGET_DIR)/opt/openhab -x 'start*'
+	mkdir -p $(TARGET_DIR)$(OPENHAB_INSTALL_BASE)
+	find $(@D) -mindepth 1 -maxdepth 1 '!' -name '.*' '!' -name 'start*' -execdir cp -dpfr -t $(TARGET_DIR)$(OPENHAB_INSTALL_BASE) '{}' +
 endef
 
 define OPENHAB_INSTALL_INIT_SYSTEMD
