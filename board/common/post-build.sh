@@ -19,6 +19,3 @@ if [ -n "${GITHUB_SHA:-}" ]; then
     echo "VERSION_ID=${GITHUB_SHA}" >> ${TARGET_DIR}/etc/os-release 
 fi
 
-sed -i 's/\#HostKey \/etc\/ssh\/ssh_host_rsa_key/HostKey \/var\/lib\/ssh\/ssh_host_rsa_key/' ${TARGET_DIR}/etc/ssh/sshd_config
-sed -i 's/\#HostKey \/etc\/ssh\/ssh_host_ecdsa_key/HostKey \/var\/lib\/ssh\/ssh_host_ecdsa_key/' ${TARGET_DIR}/etc/ssh/sshd_config
-sed -i 's/\#HostKey \/etc\/ssh\/ssh_host_ed25519_key/HostKey \/var\/lib\/ssh\/ssh_host_ed25519_key/' ${TARGET_DIR}/etc/ssh/sshd_config
