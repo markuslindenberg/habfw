@@ -8,6 +8,8 @@ SupplementaryGroups=dialout
 DynamicUser=yes
 ReadWritePaths=/srv/openhab
 ReadWritePaths=/run/lock
+TemporaryFileSystem=/srv/openhab/userdata/tmp:mode=777
+TemporaryFileSystem=/srv/openhab/userdata/cache:mode=777
 LogsDirectory=openhab
 Environment=OPENHAB_HOME=/opt/openhab
 Environment=OPENHAB_RUNTIME=/opt/openhab/runtime
