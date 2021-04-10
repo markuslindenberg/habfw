@@ -4,8 +4,9 @@ Type=ether
 [Network]
 EmitLLDP=yes
 LinkLocalAddressing=yes
+MulticastDNS=yes
 DHCP=yes
 
 [DHCP]
 ClientIdentifier=mac
-RouteMetric=200
+RouteMetric=100
