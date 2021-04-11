@@ -3,7 +3,7 @@ name: image
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   BUILDROOT_VERSION: '2021.02'
