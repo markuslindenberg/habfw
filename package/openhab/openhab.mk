@@ -18,7 +18,7 @@ endef
 define OPENHAB_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)$(OPENHAB_INSTALL_BASE)
 	find $(@D) -mindepth 1 -maxdepth 1 '!' -name '.*' '!' -name 'start*' -execdir cp -dpfr -t $(TARGET_DIR)$(OPENHAB_INSTALL_BASE) '{}' +
-	$(INSTALL) -D -m 644 $(OPENHAB_PKGDIR)/tmpfiles.conf $(TARGET_DIR)/etc/tmpfiles.d/100-openhab.conf'
+	$(INSTALL) -D -m 644 $(OPENHAB_PKGDIR)/tmpfiles.conf $(TARGET_DIR)/etc/tmpfiles.d/100-openhab.conf
 endef
 
 define OPENHAB_INSTALL_INIT_SYSTEMD
