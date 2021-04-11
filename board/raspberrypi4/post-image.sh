@@ -17,7 +17,7 @@ rm -rf "${BINARIES_DIR}/image0"
 mkdir -p "${BINARIES_DIR}/image0"
 cp -r -t "${BINARIES_DIR}/image0" "${BINARIES_DIR}/rpi-firmware/overlays"
 echo -e "root=/dev/mmcblk0p2 $(<${BINARIES_DIR}/cmdline.txt)" > "${BINARIES_DIR}/image0/cmdline.txt"
-echo -e "os_prefix=image0/\ninclude config-common.txt" > "${BINARIES_DIR}/config.txt"
+echo -e "os_prefix=image0/\n$(<${BINARIES_DIR}/config-common.txt)" > "${BINARIES_DIR}/config.txt"
 
 RAUC_MANIFEST=$(cat <<EOM
 [update]
