@@ -57,16 +57,15 @@ jobs:
           make -s all
         working-directory: 'buildroot'
 
-      - name: zip image
-        run: |
-          zip habfw-install.zip habfw.img
-        working-directory: 'buildroot/output/images'
-
-      - name: upload artifacts
+      - name: upload sdcard image
         uses: actions/upload-artifact@v2
         with:
-          name: '${{ env.BUILD_NAME }}'
-          path: |
-            buildroot/output/images/habfw-install.zip
-            buildroot/output/images/habfw-update.bin
+          name: 'sdcard'
+          path: buildroot/output/images/habfw.img
+
+      - name: upload update image
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'update'
+          path: buildroot/output/images/habfw-update.bin
 
