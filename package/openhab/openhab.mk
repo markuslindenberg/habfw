@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-OPENHAB_VERSION = 3.1.0.M3
+OPENHAB_VERSION = 3.1.0.M4
 OPENHAB_SOURCE = openhab-$(OPENHAB_VERSION).zip
 OPENHAB_SITE = https://openhab.jfrog.io/artifactory/libs-milestone-local/org/openhab/distro/openhab/$(OPENHAB_VERSION)
 OPENHAB_LICENSE = EPL-2.0

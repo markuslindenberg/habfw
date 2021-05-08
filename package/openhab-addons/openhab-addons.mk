@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-OPENHAB_ADDONS_VERSION = 3.1.0.M3
+OPENHAB_ADDONS_VERSION = 3.1.0.M4
 OPENHAB_ADDONS_SOURCE = openhab-addons-$(OPENHAB_ADDONS_VERSION).kar
 OPENHAB_ADDONS_SITE = https://openhab.jfrog.io/artifactory/libs-milestone-local/org/openhab/distro/openhab-addons/$(OPENHAB_ADDONS_VERSION)
 OPENHAB_ADDONS_LICENSE = EPL-2.0
