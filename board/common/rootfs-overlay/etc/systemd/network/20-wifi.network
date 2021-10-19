@@ -3,9 +3,10 @@ Type=wlan
 WLANInterfaceType=station
 
 [Network]
-LinkLocalAddressing=yes
+LinkLocalAddressing=ipv4
 MulticastDNS=yes
-DHCP=yes
+DHCP=ipv4
+IPv6AcceptRA=no
 
 [DHCP]
 ClientIdentifier=mac
