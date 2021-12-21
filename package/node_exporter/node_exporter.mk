@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-NODE_EXPORTER_VERSION = 1.0.1
+NODE_EXPORTER_VERSION = 1.3.1
 NODE_EXPORTER_SITE = $(call github,prometheus,node_exporter,v$(NODE_EXPORTER_VERSION))
 NODE_EXPORTER_LICENSE = Apache-2.0
 NODE_EXPORTER_LICENSE_FILES = LICENSE
