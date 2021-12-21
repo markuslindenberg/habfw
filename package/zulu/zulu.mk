@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-ZULU_VERSION = 11.45.27
-ZULU_SOURCE = zulu$(ZULU_VERSION)-ca-jdk11.0.10-linux_aarch32hf.tar.gz
+ZULU_VERSION = 11.52.13
+ZULU_SOURCE = zulu$(ZULU_VERSION)-ca-jdk11.0.13-linux_aarch32hf.tar.gz
 ZULU_SITE = https://cdn.azul.com/zulu-embedded/bin
 ZULU_LICENSE = GPL2
 ZULU_LICENSE_FILES = LICENSE
