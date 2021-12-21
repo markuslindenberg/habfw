@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  BUILDROOT_VERSION: '2021.05'
+  BUILDROOT_VERSION: '2021.11'
 
 jobs:
   build:
