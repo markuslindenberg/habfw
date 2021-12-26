@@ -5,3 +5,4 @@ disable_overscan=1
 disable_splash=1
 #enable_uart=1
 dtparam=watchdog=on
+dtparam=krnbt=on
