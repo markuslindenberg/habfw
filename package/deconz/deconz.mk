@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-DECONZ_VERSION = 2.12.06
+DECONZ_VERSION = 2.14.01
 DECONZ_SOURCE = deconz-$(DECONZ_VERSION)-qt5.deb
 DECONZ_SITE = https://deconz.dresden-elektronik.de/raspbian/stable
 
