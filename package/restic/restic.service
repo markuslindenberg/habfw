@@ -1,0 +1,14 @@
+[Unit]
+Description=node_exporter
+Documentation=https://github.com/prometheus/node_exporter
+
+[Service]
+Restart=always
+User=prometheus
+DynamicUser=yes
+ExecStart=/usr/bin/node_exporter --collector.wifi --collector.systemd
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+

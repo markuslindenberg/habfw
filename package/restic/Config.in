@@ -1,0 +1,8 @@
+config BR2_PACKAGE_RESTIC
+	bool "restic"
+	depends on BR2_PACKAGE_HOST_GO_TARGET_ARCH_SUPPORTS
+	help
+	  Fast, secure, efficient backup program
+
+	  https://github.com/restic/restic
+
